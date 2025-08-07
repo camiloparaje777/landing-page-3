@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="pagina.css">
+    <title>Document</title>
+    <style>
+      body {
+      font-family: Arial, sans-serif;
+      background: #111;
+      color: #fff;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      height: 100vh;
+    }
+    h1 {
+      margin-bottom: 20px;
+    }
+    #countdown {
+      font-size: 2.5em;
+      background: #222;
+      padding: 20px;
+      border-radius: 10px;
+      box-shadow: 0 0 15px #00f;
+    }
+    </style>
+</head>
+<body>
+<picture>
+  <source media="(min-width: 768px)" srcset="banner_desktop.png">
+  <img  class="banner" src="banner_mobile.png" alt="Ya llega! Más de 100.000 productos">
+</picture>
+  <video autoplay muted loop id="video-fondo">
+    <source src="Video de WhatsApp 2025-08-07 a las 20.11.36_a35e6f91.mp4" type="video/mp4">
+  </video>
+
+    <header class="summer">
+    <h1> </h1>
+    <h1>SUMMER FEST</h1>
+    <img class="sum" src="summer fest.webp" type="align-content: center">
+    </header>
+    <h1>Falta para el evento:</h1>
+<div id="countdown">Cargando...</div>
+  <script>
+    const eventoFecha = new Date(2025, 7, 10, 18, 0, 0); // 10 de agosto de 2025 a las 18:00
+
+  function actualizarCuentaRegresiva() {
+    const ahora = new Date().getTime();
+    const diferencia = eventoFecha - ahora;
+
+    if (diferencia <= 0) {
+      document.getElementById("countdown").innerHTML = "¡El evento ha comenzado!";
+      clearInterval(intervalo);
+      return;
+    }
+
+    const dias = Math.floor(diferencia / (1000 * 60 * 60 * 24));
+    const horas = Math.floor((diferencia % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+    const minutos = Math.floor((diferencia % (1000 * 60 * 60)) / (1000 * 60));
+    const segundos = Math.floor((diferencia % (1000 * 60)) / 1000);
+
+    document.getElementById("countdown").innerHTML =
+      `${dias}d ${horas}h ${minutos}m ${segundos}s`;
+  }
+
+  // Actualizar cada segundo
+  const intervalo = setInterval(actualizarCuentaRegresiva, 1000);
+  actualizarCuentaRegresiva(); // Llamar una vez al cargar
+  </script>
+</body>
+</html>

@@ -1,0 +1,68 @@
+
+  .banner {
+    width: 100%;
+    height: auto;
+    display: block;
+    box-shadow: 10px 1px 10px 6px black;
+  }
+
+
+
+.logo {
+    width: 70px;
+}
+.prom{
+    display: flex;
+}
+body{
+  font-family: Arial, sans-serif;
+  background: #111;
+  color: #fff;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  margin: 0;
+    
+}
+#video-fondo {
+  position: fixed;
+  top: 0;
+  left: 0;
+  min-width: 100%;
+  min-height: 100%;
+  object-fit: cover;
+  z-index: -1; /* Lo pone detrás del contenido */
+  background-position: center;
+}
+.summer{
+    display: flex;
+    flex-direction: column;
+    align-content: center;
+    justify-content: center;
+    align-items: center;
+}
+.sum{
+    width: 900px;
+    height: auto;
+    display: block;
+
+}
+h1 {
+
+}
+
+#countdown {
+  font-size: 2.5em;
+  background: #222;
+  padding: 20px 40px;
+  border-radius: 10px;
+  box-shadow: 0 0 20px rgba(0, 123, 255, 0.6);
+  letter-spacing: 1px;
+  text-align: center;
+}
+
+
+
+
